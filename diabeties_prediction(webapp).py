@@ -4,14 +4,18 @@ Created on Thu Sep  4 19:23:41 2025
 
 @author: 2003m
 """
-
-import numpy as np 
-import pickle 
 import streamlit as st
-model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
+import pickle
+import os    # <--- ADD THIS
+import numpy as np
+import pandas as pd
 
-# Load the model
+#import numpy as np 
+#import pickle 
+#import streamlit as st
+model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
 loader_model = pickle.load(open(model_path, "rb"))
+
 #loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
 
 # creating function forprediction
@@ -101,3 +105,4 @@ if __name__ == '__main__' :
     
 
     
+
