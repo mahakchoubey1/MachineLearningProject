@@ -8,7 +8,11 @@ Created on Thu Sep  4 19:23:41 2025
 import numpy as np 
 import pickle 
 import streamlit as st
-loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
+model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
+
+# Load the model
+loader_model = pickle.load(open(model_path, "rb"))
+#loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
 
 # creating function forprediction
 def diabetes_prediction(input_data):
@@ -95,4 +99,5 @@ if __name__ == '__main__' :
     
     
     
+
     
