@@ -6,7 +6,7 @@ This is a temporary script file.
 """
 import numpy as np
 import pandas as pd
-import seaborn as sns
+#import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn import svm
@@ -33,4 +33,5 @@ print(prediction)
 if (prediction[0] == 0):
   print('The person is not diabetic')
 else:
+
   print('The person is diabetic')
