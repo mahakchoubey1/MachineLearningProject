@@ -6,7 +6,7 @@ Created on Thu Sep  4 19:23:41 2025
 """
 #import predictive_system
 import streamlit as st
-import pickle
+import joblib
 import os    # <--- ADD THIS
 import numpy as np
 import pandas as pd
@@ -15,7 +15,7 @@ import pandas as pd
 #import pickle 
 #import streamlit as st
 model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
-loader_model = pickle.load(open(model_path, "rb"))
+loader_model = joblib.load(model_path)
 
 #loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
 
@@ -106,6 +106,7 @@ if __name__ == '__main__' :
     
 
     
+
 
 
 
