@@ -4,7 +4,7 @@ Created on Thu Sep  4 19:23:41 2025
 
 @author: 2003m
 """
-import predictive_system
+#import predictive_system
 import streamlit as st
 import pickle
 import os    # <--- ADD THIS
@@ -106,5 +106,6 @@ if __name__ == '__main__' :
     
 
     
+
 
 
