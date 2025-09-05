@@ -7,13 +7,17 @@ This is a temporary script file.
 import numpy as np
 import pandas as pd
 #import seaborn as sns
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn import svm
-from sklearn.metrics import accuracy_score
+#from sklearn.preprocessing import StandardScaler
+#from sklearn.model_selection import train_test_split
+#from sklearn import svm
+#from sklearn.metrics import accuracy_score
 import pickle
+import os 
 #loading tthe saved model
-loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
+model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
+loader_model = pickle.load(open(model_path, "rb"))
+#loading tthe saved model
+#loader_model=pickle.load(open('C:/Users/2003m/PycharmProjects/ML Projects/trained_model.sav','rb'))# load the saved model and" rb "is reading binary
 
 input_data = (5,166,72,19,175,25.8,0.587,51)
 
@@ -35,3 +39,4 @@ if (prediction[0] == 0):
 else:
 
   print('The person is diabetic')
+
